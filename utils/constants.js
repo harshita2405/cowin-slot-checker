@@ -1,4 +1,4 @@
-const minutes = 2;
+const minutes = 5;
 const INTERVAL = minutes * 60 * 1000;
 
 const URL = `https://cdn-api.co-vin.in/api/v2/appointment/sessions/public`;
