@@ -1,6 +1,8 @@
 # Cowin slot checker
 This app helps you check for cowin slots and sends a desktop notification as soon as it finds.
 
+![image](https://user-images.githubusercontent.com/19853007/117050646-363f7d80-ad33-11eb-85c0-c422ebaa4972.png)
+
 ## Requirement
 - Requires `node` to be installed
 - Install [Node JS](https://nodejs.org/en/download/)
