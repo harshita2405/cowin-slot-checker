@@ -1,0 +1,27 @@
+{
+  "name": "cowin-slot-checker",
+  "version": "1.0.0",
+  "description": "This is a small node js app to check cowin slots for vaccination",
+  "main": "index.js",
+  "dependencies": {
+    "node-notifier": "^9.0.1",
+    "open": "^8.0.7",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "single" : "node src/checkSingle.js",
+    "multiple" : "node src/checkMultiple.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/harshita2405/cowin-slot-checker.git"
+  },
+  "author": "Harshita",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harshita2405/cowin-slot-checker/issues"
+  },
+  "homepage": "https://github.com/harshita2405/cowin-slot-checker#readme"
+}
