@@ -1,4 +1,4 @@
-const Locations = [
+module.exports = [
   {
     state: "Punjab",
     district_name: "SAS",
@@ -30,5 +30,3 @@ const Locations = [
     district_name: "Agra",
   },
 ];
-
-module.exports = Locations;
