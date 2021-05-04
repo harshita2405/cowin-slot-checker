@@ -15,7 +15,7 @@ This app helps you check for cowin slots and sends a desktop notification as soo
 
 
 ## Check a single location
-### Different environment variables
+### Environment variables
 ```
 PINCODE (To check via pincode)
 STATE 
@@ -33,7 +33,7 @@ NOW ( true / false ) : Set it to `true` to run the command only once, defaults t
 
 
 ## Check for multiple locations
-### Different environment variables
+### Environment variables
 ```
 NOW ( true / false ) : Set it to `true` to run the command only once, defaults to false and it checks every 5 min
 ```
