@@ -56,7 +56,7 @@ module.exports = [{
 ```
 
 ## Notes
-It currently supports only the follwing states :
+It currently supports only the following states :
 - Punjab
 - Chandigarh
 - Haryana
