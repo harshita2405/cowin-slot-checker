@@ -10,19 +10,12 @@ function getCentreNames(names = []) {
     : `${names.join(", ")}`;
 }
 
-function getInputString({
-  district_name = "",
-  age = 18,
-  pincode = 0,
-  state = "",
-  vaccine = "",
-}) {
-  const location = pincode
-    ? `pincode: ${pincode}`
-    : `${state}, ${district_name}`;
-  return `${age}+ ${
-    vaccine ? `(${vaccine}) ` : ""
-  }session available in ${location}`;
+function getLocation({ pincode = 0, state = "", district_name = "" }) {
+  return pincode ? `pincode: ${pincode}` : `${state}, ${district_name}`;
+}
+
+function getAgeString({ age, vaccine }) {
+  return `${age}+ ${vaccine ? `(${vaccine})` : ""}`;
 }
 
 function getDate() {
@@ -78,10 +71,11 @@ function notify(message) {
 }
 
 module.exports = {
+  getAgeString,
   getCentreNames,
   getDate,
   getDistrictId,
-  getInputString,
   getUrl,
   notify,
+  getLocation,
 };

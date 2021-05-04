@@ -2,10 +2,11 @@ const request = require("request");
 const utils = require("../utils/");
 
 const {
+  getAgeString,
   getCentreNames,
   getDate,
   getDistrictId,
-  getInputString,
+  getLocation,
   getUrl,
   notify,
 } = utils;
@@ -20,13 +21,8 @@ function checkAvailability({
   const district_id = !pincode && getDistrictId({ state, district_name });
   const date = getDate();
   const url = getUrl({ district_id, pincode, date });
-  const infoString = getInputString({
-    district_name,
-    age,
-    pincode,
-    state,
-    vaccine,
-  });
+  const location = getLocation({ pincode, state, district_name });
+  const ageString = getAgeString({ age, vaccine });
   if (url) {
     request(url, { json: true }, (err, res, body) => {
       if (err) {
@@ -62,11 +58,11 @@ function checkAvailability({
           const centresCount = availableCenters.length;
           const message = `${centresCount} session${
             centresCount > 1 ? "s" : ""
-          } available for ${infoString}: ${namesString}`;
+          } available for ${ageString} in ${location}: ${namesString}`;
           console.log(message);
           notify(message);
         } else {
-          const message = `No ${infoString} :(`;
+          const message = `No ${ageString} sessions available in ${location} :(`;
           console.log(message);
         }
       } catch (err) {
