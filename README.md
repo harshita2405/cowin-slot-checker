@@ -1,7 +1,8 @@
 # Cowin slot checker
 This app helps you check for cowin slots and sends a desktop notification as soon as it finds.
 
-![image](https://user-images.githubusercontent.com/19853007/117050646-363f7d80-ad33-11eb-85c0-c422ebaa4972.png)
+![image](https://user-images.githubusercontent.com/19853007/117051933-b87c7180-ad34-11eb-94c4-cdd50769d906.png)
+
 
 ## Requirement
 - Requires `node` to be installed
@@ -14,7 +15,7 @@ This app helps you check for cowin slots and sends a desktop notification as soo
 
 
 ## Check a single location
-### Different environment variables
+### Environment variables
 ```
 PINCODE (To check via pincode)
 STATE 
@@ -32,7 +33,7 @@ NOW ( true / false ) : Set it to `true` to run the command only once, defaults t
 
 
 ## Check for multiple locations
-### Different environment variables
+### Environment variables
 ```
 NOW ( true / false ) : Set it to `true` to run the command only once, defaults to false and it checks every 5 min
 ```
