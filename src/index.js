@@ -51,19 +51,29 @@ function checkAvailability({
         });
 
         if (availableCenters && availableCenters.length) {
-          const names = availableCenters.map(
-            (availableSession) => availableSession.name
+          console.log("\n--------------------------");
+          console.log(
+            `${district_name} ${
+              vaccine ? `(${vaccine})` : ""
+            } : ${new Date().toLocaleTimeString()}`
           );
+          const names = availableCenters.map((centers) => {
+            console.log(centers.name);
+
+            centers.sessions.map(({ date, available_capacity }) => {
+              if (available_capacity > 0) {
+                console.log(date, available_capacity);
+              }
+            });
+
+            return centers.name;
+          });
           const namesString = getCentreNames(names);
           const centresCount = availableCenters.length;
           const message = `${centresCount} session${
             centresCount > 1 ? "s" : ""
           } available for ${ageString} in ${location}: ${namesString}`;
-          console.log(message);
           notify(message);
-        } else {
-          const message = `No ${ageString} sessions available in ${location} :(`;
-          console.log(message);
         }
       } catch (err) {
         if (err && err.message) {

@@ -24,7 +24,6 @@ function main() {
       });
     }
   );
-  console.log("\n");
 }
 
 if (NOW) {
